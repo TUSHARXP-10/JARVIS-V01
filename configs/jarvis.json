@@ -1,0 +1,53 @@
+{
+  "general": {
+    "name": "Jarvis",
+    "version": "1.0.0",
+    "debug": false
+  },
+  "audio": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames_per_buffer": 1024,
+    "input_device": "default",
+    "output_device": "default"
+  },
+  "wake_word": {
+    "engine": "porcupine",
+    "model_path": "models/porcupine_params.pv",
+    "keyword_path": "models/hey-jarvis.ppn",
+    "sensitivity": 0.5,
+    "library_path": ""
+  },
+  "speech_recognition": {
+    "engine": "vosk",
+    "model_path": "models/vosk-model-en-us-0.22",
+    "sample_rate": 16000
+  },
+  "text_to_speech": {
+    "engine": "espeak",
+    "voice": "en",
+    "rate": 175,
+    "volume": 100,
+    "pitch": 50
+  },
+  "plugins": {
+    "directory": "plugins",
+    "auto_load": true,
+    "enabled_plugins": [
+      "file_manager",
+      "web_search",
+      "calendar",
+      "code_snippets"
+    ]
+  },
+  "nlu": {
+    "confidence_threshold": 0.7,
+    "max_intents": 5
+  },
+  "logging": {
+    "level": "info",
+    "file": "jarvis.log",
+    "max_size_mb": 10,
+    "max_files": 5
+  }
+}
